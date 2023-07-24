@@ -15,16 +15,13 @@ export async function getData () {
     const {data} = response;
     return data;
 } 
-export async function postData (body) {}
+export async function postData (body) {
+    const response = await axios.post(URL, body);
+    console.log(response);
+    console.log('Success');
+    //const {data} = response;
+    //console.log(data);
+}
 
 
-/*export function axiosService ({method, url, body}) {
-    
-    async function doFetch () {
-        const response = await axios[method](url, body);
-        const {data} = response;
-        return data;
-    }
-
-    return { doFetch };
-}*/
+// Define index.js in services and export all of them

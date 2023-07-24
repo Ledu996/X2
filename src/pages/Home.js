@@ -7,24 +7,16 @@ import "./style.css";
 
 export function Home () {
     // either put all required components here or just a single component Similar name to home
-    // import custom hooks and also, use useEffect to fetch the required data
-    // useItemData(items[], setItems, createItem({id, title, content, date }), removeItem(id), editItem(id))    
     
     const [items, setItems] = useState([]);
-    const [title, setTitle] = useState('');
-    const [body, setBody] = useState('');
     
-    // save editTitle, editBody to state
-    // create separated service for getting and posting data
-    const createItem = () => {};
-    
-    const updateItem = (id) => { // one more param to update {title, content}
-        // const {updatedTitle, updatedBody} = updateItem;
+    const updateItem = (id, updateItem) => {
+        const {updatedTitle, updatedBody} = updateItem;
         setItems(items.map(item => {
-         return item.id === id ? {...item, title: 'updatedTitle', body: 'updatedBody'} : item;
+         return item.id === id ? {...item, title: updatedTitle, body: updatedBody} : item;
         }))
-        // setItems(updateItem);
     };
+
     const removeItem = (id) => {
         const filteredArray = items.filter((item) => item.id !== id);
         setItems(filteredArray);
@@ -49,12 +41,12 @@ export function Home () {
                     updateItem = {updateItem} 
                     removeItem = {removeItem}
                 />
-               <CreateItem />
+               <CreateItem 
+               items = {items} 
+               setItems = {setItems}
+               />
             </div>
         </Layout>
     )
 
 };
-
-
-// create custom hooks for axios and also a hook related to Items

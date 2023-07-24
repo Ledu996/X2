@@ -1,9 +1,26 @@
-export function CreateItem () {
+import { useState } from "react"
+import { postData } from "../../services/dataService";
+export function CreateItem ({items, setItems}) {
+    // add div to inputs, cause position adjustments
+
+    const [title, setTitle] = useState("");
+    const [body, setBody] = useState("");
+    
+    const createItem = () => {
+        setItems([...items, {id: items.length++, title: title, body: body, date: new Date()}])
+        console.log('Creating an item');
+        //return {id: items.length++, title, body} // add an formatted date
+    }
+    // do we change the item state or we, make a API call
     return (
         <div>
-            <input/>
-            <input />
-            <button></button>
+            <input onChange={(e) => setTitle(e.target.value)}/>
+            <input onChange={(e) => setBody(e.target.value) } />
+            <button onClick = {async () => {
+                // this is a fake request, will not update the database
+                //await postData(createItem());
+                createItem();
+            }}>Create</button>
         </div>
     )
 };

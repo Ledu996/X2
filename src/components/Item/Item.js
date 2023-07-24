@@ -11,7 +11,15 @@ export function Item (props) {
     const [editTitle, setEditTitle] = useState(props.title);
     const [editBody,  setEditBody] = useState(props.body);
     const [isEditMode, setIsEditMode] = useState(false);
-    console.log(editTitle);
+    
+    const handleSubmitForm = (e) => {
+        // check if user press Enter 
+        if(e.key === 'Enter') {
+            e.preventDefault();
+            props.updateItem(props.id, {updatedTitle: editTitle, updatedBody: editBody});
+            setIsEditMode(false);
+        }
+    }
     const itemStyle = {
         image: {
             width: '30px',
@@ -21,11 +29,8 @@ export function Item (props) {
         maxWidth: '250px'
     }
     return (
-        <form className="item--container" key={props.key} style={itemStyle} onSubmit={(e) => {
-            e.preventDefault();
-            console.log('This is an id of the element ', e.target.id);
-            props.updateItem(props.id /*{updatedTitle: editTitle, updatedBody: editBody}*/);
-            setIsEditMode(false);
+        <form className="item--container" key={props.key} style={itemStyle} onKeyDown={(e) => {
+            handleSubmitForm(e);
         }}>
             <div className="icon--wrapper">
                 <img 
@@ -56,10 +61,11 @@ export function Item (props) {
                     </>
             }
             <div className="date--container">
-                <span><img src = {Calendar} alt = "calendar" style={itemStyle.image}/>{`Date: ${Date.now()}`}</span>
+                <span><img src = {Calendar} alt = "calendar" style={itemStyle.image}/>{`Date: ${new Date(Date.now())}`}</span>
             </div>
         </form>
     )
 };
 
 // when I try to group multiple inputs in one fragment, form does call onSubmit
+// try to create more separated components 
