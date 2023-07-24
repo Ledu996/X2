@@ -1,8 +1,8 @@
 // import service for date formatting
 import { useState } from "react";
-import Edit from "../../images/edit.png";
-import Delete from "../../images/delete.png";
+import { Actions } from "./Actions";
 import Calendar from "../../images/calendar.png";
+
 
 export function Item (props) {
     // destructure properties
@@ -28,24 +28,12 @@ export function Item (props) {
         margin: '10px',
         maxWidth: '250px'
     }
+    
     return (
         <form className="item--container" key={props.key} style={itemStyle} onKeyDown={(e) => {
             handleSubmitForm(e);
         }}>
-            <div className="icon--wrapper">
-                <img 
-                  src= {Edit} 
-                  alt = "edit" 
-                  style={itemStyle.image} 
-                  onClick={() => {setIsEditMode(true);}} 
-                  />
-                <img 
-                  src= {Delete} 
-                  alt = "delete" 
-                  style={itemStyle.image} 
-                  onClick={() => {props.removeItem(props.id)}}
-                  />
-            </div>
+            <Actions id ={props.id} setIsEditMode={setIsEditMode} removeItem={props.removeItem} style = {itemStyle} />
             { // create separate component for creating new title and body
             isEditMode 
                 ? 
