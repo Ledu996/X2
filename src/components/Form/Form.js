@@ -2,6 +2,8 @@ import { useState } from "react";
 // create a index script with all services inside
 import { invalidEmailAlert, isEmptyAlert } from "../../services/swalService";
 import { isEmpty, emailValidation } from "../../services/validationService";
+import { CreateMessage } from "./CreateMessage";
+import { ThanksMessage } from "./ThanksMessage";
 
 export function Form () {
     const [username, setUserName] = useState("");
@@ -22,12 +24,21 @@ export function Form () {
         setDisplayMessage(true);
     }
     return (
-        <div>
-            <input onChange={(e) => setUserName(e.target.value)} />
-            <input onChange={(e) => setEmail(e.target.value) } />
-            <textarea onChange={(e) => setMessage(e.target.value) } />
-            <button onClick={confirmData}>Submit</button>
-            {displayMessage && <div>{`Thank you ${username} ${email} ${message}`}</div>}
+        <div style = {{display: "flex"}}>
+            <CreateMessage
+                setUserName = {setUserName}
+                setEmail = {setEmail}
+                setMessage = {setMessage}
+                confirmData = {confirmData}
+            />
+            {
+            displayMessage && 
+                <ThanksMessage 
+                  username = {username}
+                  email = {email} 
+                  message = {message}
+                /> 
+            }
         </div>
     )
 }
