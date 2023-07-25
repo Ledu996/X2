@@ -8,8 +8,6 @@ export function CreateItem ({items, setItems}) {
     
     const createItem = () => {
         setItems([...items, {id: items.length++, title: title, body: body, date: new Date()}])
-        console.log('Creating an item');
-        //return {id: items.length++, title, body} // add an formatted date
     }
     // do we change the item state or we, make a API call
     return (

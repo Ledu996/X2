@@ -4,6 +4,8 @@ import { invalidEmailAlert, isEmptyAlert } from "../../services/swalService";
 import { isEmpty, emailValidation } from "../../services/validationService";
 import { CreateMessage } from "./CreateMessage";
 import { ThanksMessage } from "./ThanksMessage";
+import { ContactInfo } from "./ContactInfo"; 
+import "./style.css";
 
 export function Form () {
     const [username, setUserName] = useState("");
@@ -24,21 +26,25 @@ export function Form () {
         setDisplayMessage(true);
     }
     return (
-        <div style = {{display: "flex"}}>
-            <CreateMessage
-                setUserName = {setUserName}
-                setEmail = {setEmail}
-                setMessage = {setMessage}
-                confirmData = {confirmData}
-            />
-            {
-            displayMessage && 
-                <ThanksMessage 
-                  username = {username}
-                  email = {email} 
-                  message = {message}
-                /> 
-            }
+        <div className="form">
+            <div className="contact--from">
+                <ContactInfo />
+                <CreateMessage
+                  setUserName = {setUserName}
+                  setEmail = {setEmail}
+                  setMessage = {setMessage}
+                  confirmData = {confirmData}
+                />
+                {
+                    displayMessage 
+                    &&     
+                        <ThanksMessage 
+                            username = {username}
+                            email = {email} 
+                            message = {message}
+                        /> 
+                }
+            </div>
         </div>
     )
 }
