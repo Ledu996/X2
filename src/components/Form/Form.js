@@ -26,6 +26,16 @@ export function Form () {
         setDisplayMessage(true);
     }
     return (
+        <>
+        {
+        displayMessage === true 
+        ? 
+        <ThanksMessage 
+        username = {username}
+        email = {email} 
+        message = {message}
+        />
+        :
         <div className="form">
             <div className="contact--from">
                 <ContactInfo />
@@ -35,16 +45,9 @@ export function Form () {
                   setMessage = {setMessage}
                   confirmData = {confirmData}
                 />
-                {
-                    displayMessage 
-                    &&     
-                        <ThanksMessage 
-                            username = {username}
-                            email = {email} 
-                            message = {message}
-                        /> 
-                }
             </div>
         </div>
+        }
+        </>
     )
 }

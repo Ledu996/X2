@@ -1,57 +1,11 @@
-header {
-    display: flex;
-    align-items: center;
-    background-color: #040415;
-    color: #fff;
-    font-family: "Clash Grotesk";
-    justify-content: space-between;
-  
-    .logo--container {
-        padding: 10px;
-        display: flex;
-        align-items: center;
-    }
+
     
-    .logo {
-        width: 25px;
-        height: 36px;
-        border-radius: 0 12rem 12rem 0;
-        background-color: #fff;
-        margin-right: 2px;
-    }
   
-    .logo--text {
-        font-weight: 800px;
-        font-size: 20px;
-    }
+   
+   
+  
+   
 
-    .header--navigation {
-        padding-right: 10px;
-    }
+    
 
-    .nav--btn {
-        font-size: 14px;
-        color: inherit;
-        border: 1px solid #fff;
-        border-radius: 23px;
-        background-color: #040415;
-        padding: 15px;
-        cursor: pointer;
-        transition: background-color 0.15s ease-in, color 0.15s ease-in;
-    }
-
-    .nav--btn:hover {
-        background-color: #ffff;
-        color: #040415;
-    }
-
-    .contact {
-        color: #000;
-        background-color: #fff;
-    }
-
-    .contact:hover {
-        background-color: #040415;
-        color: #fff;
-    }
-}
+    

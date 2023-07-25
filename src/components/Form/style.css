@@ -10,7 +10,7 @@
    width: 100%; 
 }
 
-.contact--info-half, .form--content  {
+.contact--info-half, .form--content, .thank--you-wrapper  {
     width: 50%;
 }
 .contact--info-half {
@@ -89,3 +89,11 @@
 }
 
 
+.thank--you-wrapper {
+    text-align: center;
+    background-color: beige;
+    width: 90%;
+    margin: 10px;
+    border-radius: 10px;
+    padding: 10px;
+}
