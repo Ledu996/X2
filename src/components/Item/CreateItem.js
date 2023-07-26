@@ -1,21 +1,30 @@
 import { useState } from "react"
+import { formatDate } from "../../helpers/formatDate"
 // import { postData } from "../../services/dataService";
-
-
-import "./style.css";
 
 export function CreateItem ({items, setItems}) {
     // add div to inputs, cause position adjustments
     const createItemStyles = {
         wrapper: {
+            display: 'flex',
             position: 'relative',
             padding: '3px ',
             top: '-30px',
             zIndex: '0',
         },
+        inputWrapper : {
+            position: 'relative',
+        },
+        inputLabel: {
+            position: 'absolute',
+            fontSize: '12px',
+            top: '2px',
+            left: '15px'
+        },
         input: {
-            padding: '10px',
-            borderRadius: '20px'
+            padding: '15px',
+            borderRadius: '20px',
+            margin: '2px'
         },
         button: {
             padding: '20px',
@@ -28,15 +37,21 @@ export function CreateItem ({items, setItems}) {
     }
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
-    console.log(new Date().toUTCString());
+    
     const createItem = () => {
-        setItems([...items, {id: items.length++, title: title, body: body, date: new Date().toUTCString()}])
+        setItems([...items, {id: items.length++, title: title, body: body, date: formatDate(new Date())}])
     }
     // do we change the item state or we, make a API call
     return (
         <div style={createItemStyles.wrapper}>
-            <input style = {createItemStyles.input} onChange={(e) => setTitle(e.target.value)}/>
-            <input style = {createItemStyles.input} onChange={(e) => setBody(e.target.value) } />
+            <div style={createItemStyles.inputWrapper}>
+                <span style={createItemStyles.inputLabel}>Tittle</span>
+                <input style = {createItemStyles.input} onChange={(e) => setTitle(e.target.value)}/>
+            </div>
+            <div style={createItemStyles.inputWrapper}>
+                <span style={createItemStyles.inputLabel}>Body</span>
+                <input style = {createItemStyles.input} onChange={(e) => setBody(e.target.value) } />
+            </div>
             <button style={createItemStyles.button} onClick = {async () => {
                 // this is a fake request, will not update the database
                 //await postData(createItem());

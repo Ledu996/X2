@@ -1,4 +1,16 @@
 export function formatDate (date) {
-    const utcDate = date.toUTCString();
-   return utcDate.replace("GMT", "");
+
+    const options = {
+          year: 'numeric',
+          month: 'short',
+          day: 'numeric',
+          hour: '2-digit',
+          minute: '2-digit',
+          hour12: false,
+          timeZone: 'Europe/Berlin'
+        };
+    
+     const dateFormat = new Intl.DateTimeFormat('default', options).format(date);
+     
+     return dateFormat.split(',').join('.');
 }
