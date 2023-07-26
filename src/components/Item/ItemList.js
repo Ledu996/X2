@@ -1,9 +1,7 @@
 import { Item } from "./Item";
-// import '../../pages/style.css';
+import "./style.css";
 
-// make a style for every component
-
-export function ItemList ({items, updateItem, removeItem}) { // array as param and much more
+export function ItemList ({items, updateItem, removeItem}) {
     return (
         <>
         {
@@ -12,11 +10,12 @@ export function ItemList ({items, updateItem, removeItem}) { // array as param a
                 <div>{"No Items"}</div>
             :
                 <div className="item--wrapper">
-                    {items.map(({id, title, body}, index) => (
+                    {items.map(({id, title, body, date}, index) => (
                         <Item 
                           key = {index}
                           title={title} 
-                          body={body} 
+                          body={body}
+                          date = {date}
                           id = {id} 
                           updateItem = {updateItem} 
                           removeItem = {removeItem}

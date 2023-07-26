@@ -49,7 +49,7 @@ export function Item (props) {
                     </>
             }
             <div className="date--container">
-                <span><img src = {Calendar} alt = "calendar" style={itemStyle.image}/>{`Date: ${new Date(Date.now())}`}</span>
+                <span><img src = {Calendar} alt = "calendar" style={itemStyle.image}/>{props.date}</span>
             </div>
         </form>
     )

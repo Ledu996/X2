@@ -1,13 +1,15 @@
 import { useState } from "react"
-import { postData } from "../../services/dataService";
+// import { postData } from "../../services/dataService";
+
+
 export function CreateItem ({items, setItems}) {
     // add div to inputs, cause position adjustments
 
     const [title, setTitle] = useState("");
     const [body, setBody] = useState("");
-    
+    console.log(new Date().toUTCString());
     const createItem = () => {
-        setItems([...items, {id: items.length++, title: title, body: body, date: new Date()}])
+        setItems([...items, {id: items.length++, title: title, body: body, date: new Date().toUTCString()}])
     }
     // do we change the item state or we, make a API call
     return (
