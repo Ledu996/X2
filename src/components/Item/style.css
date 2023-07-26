@@ -7,15 +7,16 @@
 
 .item--wrapper {
     display: flex;
-    max-width: 80%;
+    max-width: 100%;
     justify-content: space-evenly;
     flex-wrap: wrap;
-    max-width: 100%;
     background-color: rgb(255, 255, 255);
-    max-width: 90%;
+    border-radius: 2px;
     overflow-y: auto;
-    max-height: 500px;
-    margin: 10px;
+    margin: 70px 10px;
+    height: 500px;
+    position: relative;
+    z-index: 0;
 }
 
 .item--container { 
@@ -24,6 +25,7 @@
     box-shadow: 2px 5px 4px 4px;
     border-radius: 2px;
     padding: 4px;
+    position: relative;
     
 }
 .icon--wrapper {
@@ -33,4 +35,17 @@
 
 .item--container > h4 {
     text-align: center;
+}
+
+.create--item-wrapper {
+        /* height: 140px; */
+        position: relative;
+        padding: 3px;
+        top: -30px;
+        z-index: 0;
+}
+
+.create--item-input {
+    padding: 10px;
+    border-radius: 20px;
 }

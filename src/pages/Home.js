@@ -24,6 +24,7 @@ export function Home () {
     useEffect(() => {
             getData()
             .then(result => {
+                // date is missing in jsonPlaceHolder so I added it to an posts array, in specific format
                 setItems(result.map(e => ({...e, date: formatDate(new Date ())})))
                 console.log(items);
             })

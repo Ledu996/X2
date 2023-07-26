@@ -8,6 +8,9 @@ header {
     color: #fff;
     font-family: "Clash Grotesk";
     justify-content: space-between;
+    position: fixed;
+    z-index: 1;
+    width: 100%;
 }
 
 .logo--container {
