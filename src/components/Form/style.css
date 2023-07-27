@@ -4,14 +4,6 @@
     display: flex;
     font-family: serif;
 }
-
-.form {
-    height: 610px;
-    margin: 10px;
-    background: white;
-    border-radius: 10px;
-}
-
 .contact--from {
    width: 100%; 
 }

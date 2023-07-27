@@ -6,27 +6,14 @@ import { InputField } from "../Input/InputField";
 export function CreateItem ({items, setItems}) {
     // add div to inputs, cause position adjustments
     const createItemStyles = {
-        wrapper: {
+        /*wrapper: {
             display: 'flex',
             position: 'relative',
             padding: '35px ',
             top: '-30px',
             zIndex: '0',
-        },
-        inputWrapper : {
-            position: 'relative',
-        },
-        inputLabel: {
-            position: 'absolute',
-            fontSize: '12px',
-            top: '2px',
-            left: '15px'
-        },
-        input: {
-            padding: '15px',
-            borderRadius: '20px',
-            margin: '2px'
-        },
+        },*/
+        
         button: {
             padding: '20px',
             borderRadius: '12px',
@@ -44,21 +31,9 @@ export function CreateItem ({items, setItems}) {
     }
     // do we change the item state or we, make a API call
     return (
-        <div style={createItemStyles.wrapper}>
-            <InputField 
-              set1 = {setTitle} 
-              set2 = {setBody} 
-              label1 = {"title"}
-              label2 = {"body"} 
-              />
-            {/*<div style={createItemStyles.inputWrapper}>
-                <span style={createItemStyles.inputLabel}>Tittle</span>
-                <input style = {createItemStyles.input} onChange={(e) => setTitle(e.target.value)}/>
-            </div>
-            <div style={createItemStyles.inputWrapper}>
-                <span style={createItemStyles.inputLabel}>Body</span>
-                <input style = {createItemStyles.input} onChange={(e) => setBody(e.target.value) } />
-                </div>*/}
+        <div className="input--create--wrapper">
+            <InputField setValue = {setTitle} label = {"title"} />
+            <InputField setValue = {setBody} label = {"body"} />   
             <button style={createItemStyles.button} onClick = {async () => {
                 // this is a fake request, will not update the database
                 //await postData(createItem());

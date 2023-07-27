@@ -23,7 +23,7 @@ export function Form () {
             await invalidEmailAlert();
             return;
         }
-        setDisplayMessage(true);
+        setDisplayMessage(prev => !prev); // !displayMessage
     }
     return (
         <>
@@ -37,7 +37,6 @@ export function Form () {
         />
         :
         <div className="form">
-            <div className="contact--from">
                 <ContactInfo />
                 <CreateMessage
                   setUserName = {setUserName}
@@ -47,7 +46,6 @@ export function Form () {
                   username = {username}
                   email = {email}
                 />
-            </div>
         </div>
         }
         </>

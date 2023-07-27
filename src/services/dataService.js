@@ -2,7 +2,7 @@ import axios from "axios";
 
 const URL = process.env.REACT_APP_POSTS_URL;
 
-// Wad thinking about creatidg universal custom hook for data manipulation too
+// Was thinking about creatidg universal custom hook for data manipulation too
 
 export async function getData () {
     const response = await axios.get(URL);

@@ -49,7 +49,7 @@ export function Item (props) {
                     </div>
             }
             <div className="date--container">
-            <img src = {Calendar} alt = "calendar" className="image--icon-item"/>
+                <img src = {Calendar} alt = "calendar" className="image--icon-item"/>
                 <span>{props.date}</span>
             </div>
         </form>

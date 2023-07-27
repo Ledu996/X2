@@ -5,12 +5,21 @@
 .input--label {
     position: 'absolute';
     font-size: '13px';
-    top: '2px';
-    left: '15px';
+    top: '6px';
+    left: '29px';
+    font-weight: 600;
 }
 
 .input--field {
-    padding: 15px;
+    padding: 17px;
     border-radius: 20px;
     margin: 2px;
+    font-size: 16px;
+    transition: border-color 0.15s ease-in;
+}
+
+.input--field:focus { 
+    border-color:  rgb(168, 168, 245);
+    border-width: 3px;
+    box-shadow: 1px 1px 0px rgba(167, 219, 242, 0.2);
 }
