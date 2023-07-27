@@ -1,7 +1,9 @@
 // import service for date formatting
 import { useState } from "react";
 import { Actions } from "./Actions";
-import Calendar from "../../images/calendar.png";
+import { EditInputs } from "./EditInputs";
+import Calendar from "../../assets/images/calendar.png";
+import "./style.css";
 
 
 export function Item (props) {
@@ -20,36 +22,35 @@ export function Item (props) {
             setIsEditMode(false);
         }
     }
-    const itemStyle = {
-        image: {
-            width: '30px',
-            height: '30px'
-        },
-        margin: '10px',
-        maxWidth: '250px'
-    }
     
     return (
-        <form className="item--container" key={props.key} style={itemStyle} onKeyDown={(e) => {
+        <form className="item--container" key={props.key}  onKeyDown={(e) => {
             handleSubmitForm(e);
         }}>
-            <Actions id ={props.id} setIsEditMode={setIsEditMode} removeItem={props.removeItem} style = {itemStyle} />
-            { // create separate component for creating new title and body
+            <Actions 
+              id ={props.id} 
+              setIsEditMode={setIsEditMode} 
+              removeItem={props.removeItem}
+            />
+            {
+
             isEditMode 
                 ? 
-                    
-                    <>
-                        <input value = {editTitle} onChange = {(e) => setEditTitle(e.target.value) }/>
-                        <input value = {editBody} onChange = {(e) => setEditBody(e.target.value) }/>
-                    </>
+                    <EditInputs
+                      editTitle={editTitle}
+                      editBody={editBody}
+                      setEditTitle={setEditTitle}
+                      setEditBody={setEditBody}
+                    />
                 :
-                    <>
-                        <h4>{props.title.toUpperCase()}</h4>
-                        <div>{props.body}</div>
-                    </>
+                    <div className = "item--content--wrapper">
+                        <h4 className="item--heading">{props.title.toUpperCase()}</h4>
+                        <p className="item--text">{props.body}</p>
+                    </div>
             }
             <div className="date--container">
-                <span><img src = {Calendar} alt = "calendar" style={itemStyle.image}/>{props.date}</span>
+            <img src = {Calendar} alt = "calendar" className="image--icon-item"/>
+                <span>{props.date}</span>
             </div>
         </form>
     )

@@ -1,5 +1,6 @@
 import { useState } from "react"
 import { formatDate } from "../../helpers/formatDate"
+import { InputField } from "../Input/InputField";
 // import { postData } from "../../services/dataService";
 
 export function CreateItem ({items, setItems}) {
@@ -8,7 +9,7 @@ export function CreateItem ({items, setItems}) {
         wrapper: {
             display: 'flex',
             position: 'relative',
-            padding: '3px ',
+            padding: '35px ',
             top: '-30px',
             zIndex: '0',
         },
@@ -44,14 +45,20 @@ export function CreateItem ({items, setItems}) {
     // do we change the item state or we, make a API call
     return (
         <div style={createItemStyles.wrapper}>
-            <div style={createItemStyles.inputWrapper}>
+            <InputField 
+              set1 = {setTitle} 
+              set2 = {setBody} 
+              label1 = {"title"}
+              label2 = {"body"} 
+              />
+            {/*<div style={createItemStyles.inputWrapper}>
                 <span style={createItemStyles.inputLabel}>Tittle</span>
                 <input style = {createItemStyles.input} onChange={(e) => setTitle(e.target.value)}/>
             </div>
             <div style={createItemStyles.inputWrapper}>
                 <span style={createItemStyles.inputLabel}>Body</span>
                 <input style = {createItemStyles.input} onChange={(e) => setBody(e.target.value) } />
-            </div>
+                </div>*/}
             <button style={createItemStyles.button} onClick = {async () => {
                 // this is a fake request, will not update the database
                 //await postData(createItem());

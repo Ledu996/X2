@@ -1,10 +1,10 @@
-import Edit from "../../images/edit.png";
-import Delete from "../../images/delete.png";
+import Edit from "../../assets/images/edit.png";
+import Delete from "../../assets/images/delete.png";
 import {deleteConfirmationAlert} from "../../services/swalService";
 
-export function Actions ({setIsEditMode, removeItem, id, style}) {
+export function Actions ({setIsEditMode, removeItem, id}) {
     
-  const deleteItem = async () => {
+  const deleteItem = async (id) => {
       const result = await deleteConfirmationAlert(id);
       if (result.isConfirmed) {
         removeItem(id)
@@ -13,21 +13,18 @@ export function Actions ({setIsEditMode, removeItem, id, style}) {
 
     return (
         <div className="icon--wrapper">
-                <img 
-                  src= {Edit} 
-                  alt = "edit" 
-                  style={style.image} 
-                  onClick={() => {setIsEditMode(true);}} 
-                  />
-                <img 
-                  src= {Delete} 
-                  alt = "delete" 
-                  style={style.image} 
-                  onClick={() => {
-                    deleteItem();
-                    
-                  }}
-                  />
-            </div>
+          <img className= "image--icon-item"
+            src= {Edit} 
+            alt = "edit" 
+            onClick={() => {setIsEditMode(prev => !prev);}} 
+          />
+          <img className = "image--icon-item"
+            src= {Delete} 
+            alt = "delete" 
+            onClick={() => {
+                deleteItem(id);
+            }}
+          />
+        </div>
     )
 };

@@ -1,0 +1,16 @@
+.input--wrapper {
+    position: relative;
+}
+
+.input--label {
+    position: 'absolute';
+    font-size: '13px';
+    top: '2px';
+    left: '15px';
+}
+
+.input--field {
+    padding: 15px;
+    border-radius: 20px;
+    margin: 2px;
+}

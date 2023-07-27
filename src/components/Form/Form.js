@@ -44,6 +44,8 @@ export function Form () {
                   setEmail = {setEmail}
                   setMessage = {setMessage}
                   confirmData = {confirmData}
+                  username = {username}
+                  email = {email}
                 />
             </div>
         </div>

@@ -1,9 +1,10 @@
 import { Layout } from "../components/Layout/Layout"
 
 export function About () {
+
     return (
         <Layout>
-            <div className = "lorem--text--wrapper">
+            <div>
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. 
             Sed placerat odio sit amet purus sollicitudin, 
             eget congue erat mattis. Vivamus eget commodo magna, 

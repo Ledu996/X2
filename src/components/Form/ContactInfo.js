@@ -1,6 +1,6 @@
-import TelephoneIcon from "../../images/telephone.png";
-import EmailIcon from "../../images/mail.png";
-import LocationIcon from "../../images/location-pin.png"
+import TelephoneIcon from "../../assets/images/telephone.png";
+import EmailIcon from "../../assets/images/mail.png";
+import LocationIcon from "../../assets/images/location-pin.png"
 
 
 export function ContactInfo () {
