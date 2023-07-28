@@ -1,5 +1,5 @@
 
-
+/*
 .form, .contact--from, .form--content, .contact--info-half, .contact--icon--wrapper {
     display: flex;
     font-family: serif;
@@ -19,13 +19,17 @@
     align-items: center;
     height: 500px;
 }
+*/
+
+/*
 
 .subinfo--wrapper {
     margin: 15px;
     padding: 10px
 }
+
 .contact--icon--wrapper {
-    /*justify-content: space-evenly;*/
+    justify-content: space-evenly;
     align-items: center;
     padding: 15px;
 }
@@ -33,7 +37,6 @@
     margin-right: 5px;
     max-width: 50px;
 }
-
 .contact--from {
     justify-content: center;
     align-items: center;
@@ -47,7 +50,7 @@
 
 .input--wrapper {
     position: relative;
-    /*padding: 5px 55px 5px 55px;*/
+    padding: 5px 55px 5px 55px;
     padding: 5px;
 }
 
@@ -60,7 +63,7 @@
 
 .contact--input {
     padding: 20px 70px;
-    /*border: 1px solid #7363fc00;*/
+    border: 1px solid #7363fc00;
     border-radius: 10px;
     transition: border-color 0.15s ease-in;
     font-size: 20px;
@@ -95,3 +98,4 @@
     border-radius: 10px;
     padding: 10px;
 }
+*/

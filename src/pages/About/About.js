@@ -1,7 +1,7 @@
 import { Layout } from "../../components/Layout/Layout"
 
-export function About () {
 
+export function About () {
     return (
         <Layout>
             <div>

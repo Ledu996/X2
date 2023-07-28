@@ -28,4 +28,10 @@ export function invalidEmailAlert() {
     })
 }
 
-// export function thankYouMessageAlert() {} this message should be custom
+export function wrongCredentialsAlert() {
+    return Swal.fire({
+        icon: 'error',
+        title: 'Oops...',
+        text: 'Wrong credentials',
+    })
+}

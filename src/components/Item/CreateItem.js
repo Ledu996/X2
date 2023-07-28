@@ -31,7 +31,7 @@ export function CreateItem ({items, setItems}) {
     }
     // do we change the item state or we, make a API call
     return (
-        <div className="input--create--wrapper">
+        <div className="create--wrapper">
             <InputField setValue = {setTitle} label = {"title"} />
             <InputField setValue = {setBody} label = {"body"} />   
             <button style={createItemStyles.button} onClick = {async () => {

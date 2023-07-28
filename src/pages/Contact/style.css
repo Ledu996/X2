@@ -1,0 +1,13 @@
+.contact--wrapper {
+    min-height: 90vh;
+    display: flex;
+    justify-content: center;
+}
+
+.contact--form {
+    padding: 55px;
+    border: 1px solid #eeb175;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}

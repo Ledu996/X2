@@ -1,0 +1,19 @@
+
+
+.login--wrapper {
+    height: 100vh;
+    background-color: beige;
+    display: flex;
+    justify-content: center;
+}
+
+.login--form {
+    border-radius: 2px;
+    box-shadow: 2px 1px 3px 4px rgba(0, 0, 0, 0.7);
+    padding: 45px;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-height: 30vh; 
+    margin-top: 15px;
+}

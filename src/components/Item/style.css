@@ -12,7 +12,7 @@
 }
 
 .item--container {
-    /*setting new background color*/
+
     background: repeating-linear-gradient(45deg, black, transparent 100px); 
     color: aquamarine; /*rgba(222, 184, 135, 1);*/
     flex-shrink: 1;
@@ -24,7 +24,8 @@
     padding: 24px 24px;
     box-shadow: 2px 5px 4px 4px;
     text-align: center;
-    border-radius: 2px;    
+    border-radius: 2px;  
+    min-height: 40vh
 }
 
 .icon--wrapper {
@@ -65,7 +66,7 @@
     font-size: 14px;
 }
 
-.input--create--wrapper {
+.create--wrapper {
     display: flex;
     padding: 35px;
 }

@@ -1,13 +1,14 @@
+
 .input--wrapper {
     position: relative;
 }
 
 .input--label {
     position: 'absolute';
-    font-size: '13px';
+    /*font-size: '11px';
     top: '6px';
     left: '29px';
-    font-weight: 600;
+    font-weight: 600;*/
 }
 
 .input--field {
