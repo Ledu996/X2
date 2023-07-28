@@ -6,11 +6,16 @@ export function formatDate (date) {
           day: 'numeric',
           hour: '2-digit',
           minute: '2-digit',
-          hour12: true,
+          hour12: false,
           timeZone: 'Europe/Berlin'
         };
     
-     const dateFormat = new Intl.DateTimeFormat('default', options).format(date);
+     const dateFormat = 
+           new Intl.DateTimeFormat('default', options)
+           .format(date)
+           .replace(/AM|PM/g, "")
+           .split(',') 
+           .join('.')
      
-     return dateFormat.split(',').join('.');
+    return dateFormat;
 }

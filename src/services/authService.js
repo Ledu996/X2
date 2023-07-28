@@ -1,4 +1,4 @@
-import { allowedUsers } from "../helpers/AlloweUsers";
+import { allowedUsers } from "../helpers/AllowedUsers";
 
 export function isUserAuthenticated (email, password){
     

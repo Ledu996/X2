@@ -1,9 +1,9 @@
 footer {
   position: fixed;
-  background-color: gray;
+  background-color: cadetblue;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 8px;
+  padding: 10px;
   text-align: center;
 }

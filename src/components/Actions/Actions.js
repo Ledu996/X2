@@ -1,6 +1,6 @@
 import Edit from "../../assets/images/edit.png";
 import Delete from "../../assets/images/delete.png";
-import {deleteConfirmationAlert} from "../../services/swalService";
+import { deleteConfirmationAlert } from "../../services/swalService";
 
 export function Actions ({setIsEditMode, removeItem, id}) {
     

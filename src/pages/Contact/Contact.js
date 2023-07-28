@@ -3,9 +3,10 @@ import { invalidEmailAlert, isEmptyAlert } from "../../services/swalService";
 import { isEmpty, emailValidation } from "../../services/validationService";
 import { InputField } from "../../components/Input/InputField";
 import { TextArea } from "../../components/TextArea/TextArea";
-import { ThanksMessage } from "../../components/Form/ThanksMessage";
+import { ThanksMessage } from "../../components/Message/ThanksMessage";
 import { Layout } from "../../components/Layout/Layout";
 import "./style.css";
+import { OnSubmit } from "../../components/Buttton/OnSubmit";
 
 
 export function Contact () {
@@ -17,7 +18,6 @@ export function Contact () {
 
     const confirmData =  (e) => {
         e.preventDefault();
-
         if(isEmpty(username) || isEmpty(email) || isEmpty(message)) {
             isEmptyAlert();
             return;
@@ -35,13 +35,14 @@ export function Contact () {
             <div className="contact--wrapper">
                 {displayMessage 
                 ? 
-                <ThanksMessage /> 
+                <ThanksMessage username={username} email={email} message={message}/> 
                 :
                 <form className="contact--form" onSubmit={(e) => confirmData(e)}>
+                    <h2>Send Us A Message</h2>
                     <InputField label={"username"} setValue={setUserName} />
                     <InputField label={"email"} setValue={setEmail} />
                     <TextArea setMessage={setMessage} />
-                    <button type="submit">Sumbit</button>
+                    <OnSubmit />
                 </form>
                 }
             </div>

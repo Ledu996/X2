@@ -1,0 +1,8 @@
+.on--submit--btn {
+    padding: 20px;
+    border-radius: 12px;
+    background: teal;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}

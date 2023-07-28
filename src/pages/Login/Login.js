@@ -5,6 +5,7 @@ import { InputField } from "../../components/Input/InputField";
 import { Footer } from "../../components/Footer/Footer";
 import { useNavigate } from "react-router-dom";
 import "./styles.css";
+import { OnSubmit } from "../../components/Buttton/OnSubmit";
 
 export function Login () {
     const [email, setEmail] = useState("");
@@ -12,10 +13,6 @@ export function Login () {
     const [isLoogedIn, setLoogedIn] = useState(false);
     const navigate = useNavigate();
     
-    console.log('email ', email);
-    console.log('password ', password);
-    console.log('isLoggedIn ', isLoogedIn);
-
     const handleLogin = (e) => {
         e.preventDefault();
         
@@ -40,8 +37,8 @@ export function Login () {
             <form className = "login--form"  onSubmit={(e) => handleLogin(e)}>
                 <h2>Login</h2>
                 <InputField label={"email"} setValue={setEmail} />
-                <InputField label={"pass"} setValue={setPassword}/>
-                <button type="submit">Click</button>
+                <InputField label={"password"} setValue={setPassword}/>
+                <OnSubmit/>
             </form>
             <Footer />
         </div>

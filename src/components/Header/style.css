@@ -4,13 +4,10 @@ header, .logo--container {
 }
 
 header {
-    background-color: #040415;
+    background-color: darkcyan;
     color: #fff;
     font-family: "Clash Grotesk";
     justify-content: space-between;
-    /*position: fixed;
-    z-index: 1;
-    width: 100%;*/
 }
 
 .logo--container {
@@ -40,11 +37,15 @@ header {
     color: inherit;
     border: 1px solid #fff;
     border-radius: 23px;
-    background-color: #040415;
+    background: inherit;
+    color: currentcolor;
     padding: 15px;
-    cursor: pointer;
+    cursor: pointer; 
     transition: background-color 0.15s ease-in, color 0.15s ease-in;
+    margin-right: 3px;
 }
+
+
 
 .nav--btn:hover {
     background-color: #ffff;

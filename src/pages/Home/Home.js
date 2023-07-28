@@ -8,8 +8,8 @@ import "./style.css";
 
 export function Home () {
         
-    const [items, setItems] = useState([]);
-    
+    const [items, setItems] = useState([]);   
+    // all states related to Home
     const updateItem = (id, updateItem) => {
         const {updatedTitle, updatedBody} = updateItem;
         setItems(items.map(item => {
@@ -25,8 +25,6 @@ export function Home () {
     useEffect(() => {
             getData()
             .then(result => {
-                // date is missing in jsonPlaceHolder so I added it to the items array, in specific format
-                // because of that first 100 items will have the same date, because of fetching
                 setItems(result.map(e => ({...e, date: formatDate(new Date ())})))
                 console.log(items);
             })
