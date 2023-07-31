@@ -17,10 +17,10 @@
     margin: 2px;
     font-size: 16px;
     transition: border-color 0.15s ease-in;
+    color: chocolate;
 }
 
 .input--field:focus { 
-    border-color:  rgb(168, 168, 245);
+    border-color:  chocolate;
     border-width: 3px;
-    box-shadow: 1px 1px 0px rgba(167, 219, 242, 0.2);
 }

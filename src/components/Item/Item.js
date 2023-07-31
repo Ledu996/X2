@@ -32,7 +32,7 @@ export function Item (props) {
                 <form onSubmit={(e) => {handleSubmitForm(e)}}>
                     <EditInput value= {editTitle} setEditValue={setEditTitle}/>
                     <EditInput value = {editBody} setEditValue={setEditBody}/>
-                    <OnSubmit/>
+                    <OnSubmit text = {"Edit"}/>
                 </form>
                     
                 :

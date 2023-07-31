@@ -1,6 +1,9 @@
 footer {
   position: fixed;
-  background-color: cadetblue;
+  color: white;
+  font-size: 16px;
+  font-weight: 600;
+  background-color: darkcyan;
   bottom: 0;
   left: 0;
   right: 0;

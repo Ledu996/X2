@@ -42,7 +42,7 @@ export function Contact () {
                     <InputField label={"username"} setValue={setUserName} />
                     <InputField label={"email"} setValue={setEmail} />
                     <TextArea setMessage={setMessage} />
-                    <OnSubmit />
+                    <OnSubmit text = "Send" />
                 </form>
                 }
             </div>

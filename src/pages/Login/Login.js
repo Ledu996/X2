@@ -38,7 +38,7 @@ export function Login () {
                 <h2>Login</h2>
                 <InputField label={"email"} setValue={setEmail} />
                 <InputField label={"password"} setValue={setPassword}/>
-                <OnSubmit/>
+                <OnSubmit text = "Login"/>
             </form>
             <Footer />
         </div>

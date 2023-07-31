@@ -18,7 +18,7 @@ export function CreateItem ({items, setItems}) {
         <form className="create--wrapper" onSubmit={(e) => createItem(e) }>
             <InputField setValue = {setTitle} label = {"title"} />
             <InputField setValue = {setBody} label = {"body"} />
-            <OnSubmit />   
+            <OnSubmit text = {"Submit"} />   
         </form>
     )
 };

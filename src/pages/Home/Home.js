@@ -10,6 +10,7 @@ export function Home () {
         
     const [items, setItems] = useState([]);   
     // all states related to Home
+   
     const updateItem = (id, updateItem) => {
         const {updatedTitle, updatedBody} = updateItem;
         setItems(items.map(item => {
