@@ -1,0 +1,16 @@
+.sidebar {
+    height: 100vh;
+    flex-direction: column;
+    align-items: baseline;
+    column-gap: 5px;
+    color: #fff;
+    background-color: rgb(47, 79, 79);
+    transition: ease-out 1s;
+    
+}
+
+.active {
+    display: flex;
+    transition: ease-out 1s;
+    padding: 30px;
+}
