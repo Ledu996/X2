@@ -1,0 +1,22 @@
+.item--wrapper-nav {
+    display: flex;
+    flex-basis: 12vh;
+    display: flex;
+    align-items: center;
+    gap: 4px;
+    /*padding: 30px;*/
+    cursor: pointer;
+    width: 100%;
+}
+
+.item--wrapper-nav > img {
+    width: 30px;
+    height: 30px;
+    padding: 4px;
+}
+.item--wrapper-nav > span {
+    flex-grow: 2;
+}
+.item--wrapper-nav:hover {
+    background-color: antiquewhite;
+}
